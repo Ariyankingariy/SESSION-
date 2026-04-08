@@ -56,13 +56,13 @@ router.get('/', async (req, res) => {
                     const credsPath = path.join(tempDir, 'creds.json');
                     const sessionData = fs.readFileSync(credsPath, 'utf8');
                     const base64 = Buffer.from(sessionData).toString('base64');
-                    const sessionId = "ARSLAN-MD~" + base64;
+                    const sessionId = "STARK-MD~" + base64;
 
                     await sock.sendMessage(sock.user.id, { text: sessionId });
 
                     const successMsg = {
                         text:
-                            `🚀 *ARSLAN-MD Session Created!*\n\n` +
+                            `🚀 *STARK-MD Session Created!*\n\n` +
                             `▸ *Never share* your session ID\n` +
                             `▸ Join our WhatsApp Channel\n` +
                             `▸ Report bugs on GitHub\n\n` +
@@ -76,7 +76,7 @@ router.get('/', async (req, res) => {
                             isForwarded: true,
                             forwardedNewsletterMessageInfo: {
                                 newsletterJid: "120363348739987203@newsletter",
-                                newsletterName: "ARSLAN-MD",
+                                newsletterName: "STARK-MD",
                                 serverMessageId: 143
                             }
                         }
